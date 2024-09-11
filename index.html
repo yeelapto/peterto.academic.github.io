@@ -10,23 +10,22 @@
   <title>Peter To</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Updated Bootstrap and Font Awesome versions -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta2/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js"></script>
-  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
 
+    /* Target the anchor tags inside the navbar */
     .navbar-nav a {
-        font-size: 18px;
+        font-size: 18px; /* Adjust the font size as needed */
     }
     .img-responsive {
-        width: 100%;
+        width: 100%; /* Adjust as needed */
         height: auto;
-        max-width: 500px;
+        max-width: 500px; /* Optional: sets a maximum width for the image */
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -35,58 +34,63 @@
       font-family: Georgia, "Times New Roman", Times, serif;
     }
 
-    p, a {
+    p {
+      font-size: 16px;
+    }
+
+    a {
       font-size: 16px;
     }
 
     .social-icons {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      justify-content: flex-start; /* Align icons to the left */
+      align-items: center; /* Vertically aligns the icons */
       margin-top: 2%;
-      padding-left: 0;
-      margin-left: 0;
-    }
+      padding-left: 0; /* Remove left padding */
+      margin-left: 0;  /* Remove left margin */
+  }
 
     .social-icons a {
-        font-size: 24px;
-        color: #333;
+        font-size: 24px; /* Adjust the icon size */
+        color: #333; /* Default color */
         text-decoration: none;
-        margin: 0 5px;
-        padding: 5px;
+        margin: 0 5px; /* Adjust spacing between the icons */
+        padding: 5px; /* Adjust inner padding */
     }
 
     .social-icons a img.osf {
-        width: 24px;
-        height: 24px;
-        padding-top: 0;
-        margin-top: 0;
+        width: 24px; /* Same size as Font Awesome icons */
+        height: 24px; /* Same size as Font Awesome icons */
+        padding-top: 0; /* Remove any padding at the top */
+        margin-top: 0; /* Ensure no margin at the top */
     }
 
+    /* Customize individual icon colors */
     .social-icons .google-scholar { color: #4285F4; }
     .social-icons .github { color: #333; }
     .social-icons .linkedin { color: #0A66C2; }
     .social-icons .orcid { color: #A6CE39; }
 
     .social-icons a:hover {
-        opacity: 0.7;
+        opacity: 0.7; /* Slight opacity change on hover */
     }
 
     .audio-container {
-      text-align: center;
+      text-align: center; /* Center content horizontally */
     }
 
     audio {
-        display: inline-block;
+        display: inline-block; /* Ensure audio behaves like inline content */
     }
 
     .footer {
-      text-align: center;
-      position: fixed;
+      text-align: center; /* Centers the content horizontally */
+      position: fixed; /* Sticks the link to the bottom */
       bottom: 0;
-      width: 100%;
-      padding: 10px 0;
-      background-color: #f8f9fa;
+      width: 100%; /* Full width of the page */
+      padding: 10px 0; /* Adds some padding */
+      background-color: #f8f9fa; /* Optional: adds a background color */
   }
 
     .footer a {
@@ -100,9 +104,13 @@
 <body>
 
   <div class="audio-container">
-    <!-- Fixed path for the audio file at the root level -->
-    <audio src="background-music.mp3" controls></audio>
+    <audio src="background-music.mp3" controls autoplay></audio>
   </div>
+
+<!-- <div class="audio-container">
+    <audio src="/music/background-music.mp3" autoplay loop></audio>
+</div> -->
+
 
 <!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -124,7 +132,7 @@
 				  <li><a href="#ResearchGroups">Research Groups</a></li>
 				  <li><a href="#Projects">Projects</a></li>
 				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="PeterCV-Sept2024.pdf">CV</a></li> <!-- Direct path for CV -->
+				  <li><a href="PeterCV-Sept2024.pdf">CV</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -132,6 +140,8 @@
   
   <!-- Page Content -->
     <div class="container">
+      
+
         <div class="row">
 
             <!-- Entries Column -->
@@ -141,9 +151,9 @@
               </h2>            
               <h4>Ph.D. Student in Psychology 🧠 | Scientist ⚛️ | Dilettante Programmer❓💻 </h4>
               <h4>Catastrophic in Visual Arts 🧑‍🎨 & Photography 🎨 & Cooking 👨‍🍳| Husband  💍🤵</h4>
-              <h5>🎠 Coventry, 🏴 England, 🇬🇧 the United Kingdom</h5>
+              <h5>🎠 Coventry, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇬🇧 the United Kingdom</h5>
                 
-                <!-- Fixed path for the image at the root level -->
+                <!-- Main Image -->
                 <img class="img-responsive" src="PeterPhoto.png" alt="" style="width: 300px; height: auto;" >
                 
                 <div style="margin-top:3%; text-align:justify;">                
@@ -173,7 +183,7 @@
               <a href="https://scholar.google.com/citations?user=aLJaU0wAAAAJ&hl=en" class="google-scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
               <a href="https://github.com/yeelapto" class="github" title="GitHub"><i class="fab fa-github"></i></a>
               <a href="https://www.linkedin.com/in/petertoyeelap/" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://orcid.org/0000-0002-1606-9403" class="orcid" title="ORCID"><i class="fab fa-orcid"></i></a>
+              <a href="https://orcid.org/my-orcid?orcid=0000-0002-1606-9403" class="orcid" title="ORCID"><i class="fab fa-orcid"></i></a>
           </div>    
           
             <div class="col-md-8" style="height: 40vh;">    
@@ -242,12 +252,18 @@
                            
             </div>
 
+            
         </div>
+
+
     </div>
+    <!-- /.container -->
     
-    <!-- Footer -->
+    <!-- Other people may like it too! -->
     <div class="footer">
       <a href="https://github.com/mavroudisv/plain-academic">Powered by Plain Academic</a>
     </div>    
 </body>
+
+
 </html>
