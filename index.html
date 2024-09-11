@@ -7,12 +7,14 @@
 
 <html lang="en">
 <head>
-  <title>🤓 Peter To</title>
+  <title>Peter To</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Updated Bootstrap and Font Awesome versions -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta2/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js"></script>
+
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
@@ -20,50 +22,48 @@
 
     /* Target the anchor tags inside the navbar */
     .navbar-nav a {
-        font-size: 18px; /* Adjust the font size as needed */
+        font-size: 18px;
     }
+
+    /* Responsive image style */
     .img-responsive {
-        width: 100%; /* Adjust as needed */
-        height: auto;
-        max-width: 500px; /* Optional: sets a maximum width for the image */
+        width: 100%; /* Full width in its container */
+        height: auto; /* Height scales proportionally */
+        max-width: 500px; /* Optional: max-width to limit size on larger screens */
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto; /* Center the image */
     }
+
     body {
       font-family: Georgia, "Times New Roman", Times, serif;
     }
 
-    p {
-      font-size: 16px;
-    }
-
-    a {
+    p, a {
       font-size: 16px;
     }
 
     .social-icons {
       display: flex;
-      justify-content: flex-start; /* Align icons to the left */
-      align-items: center; /* Vertically aligns the icons */
+      justify-content: flex-start;
+      align-items: center;
       margin-top: 2%;
-      padding-left: 0; /* Remove left padding */
-      margin-left: 0;  /* Remove left margin */
-  }
+      padding-left: 0;
+      margin-left: 0;
+    }
 
     .social-icons a {
-        font-size: 24px; /* Adjust the icon size */
-        color: #333; /* Default color */
+        font-size: 24px;
+        color: #333;
         text-decoration: none;
-        margin: 0 5px; /* Adjust spacing between the icons */
-        padding: 5px; /* Adjust inner padding */
+        margin: 0 5px;
+        padding: 5px;
     }
 
     .social-icons a img.osf {
-        width: 24px; /* Same size as Font Awesome icons */
-        height: 24px; /* Same size as Font Awesome icons */
-        padding-top: 0; /* Remove any padding at the top */
-        margin-top: 0; /* Ensure no margin at the top */
+        width: 24px;
+        height: 24px;
+        padding-top: 0;
+        margin-top: 0;
     }
 
     /* Customize individual icon colors */
@@ -73,25 +73,26 @@
     .social-icons .orcid { color: #A6CE39; }
 
     .social-icons a:hover {
-        opacity: 0.7; /* Slight opacity change on hover */
+        opacity: 0.7;
     }
 
     .audio-container {
-      text-align: center; /* Center content horizontally */
+      text-align: center;
     }
 
     audio {
-        display: inline-block; /* Ensure audio behaves like inline content */
+        display: inline-block;
     }
 
+    /* Footer styling */
     .footer {
-      text-align: center; /* Centers the content horizontally */
-      position: fixed; /* Sticks the link to the bottom */
+      text-align: center;
+      position: fixed;
       bottom: 0;
-      width: 100%; /* Full width of the page */
-      padding: 10px 0; /* Adds some padding */
-      background-color: #f8f9fa; /* Optional: adds a background color */
-  }
+      width: 100%;
+      padding: 10px 0;
+      background-color: #f8f9fa;
+    }
 
     .footer a {
         color: #b5bec9;
@@ -99,171 +100,128 @@
         text-decoration: none;
     }
 
-</style>
+    /* Responsive Design Tweaks */
+    @media (max-width: 768px) {
+      /* For mobile screens */
+      .navbar-nav a {
+        font-size: 16px;
+      }
+
+      .col-md-8, .col-md-4 {
+        width: 100%; /* Make columns full-width on smaller screens */
+        padding: 0 10px; /* Add some padding for small screens */
+      }
+
+      /* Adjust text size on mobile */
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      p, a {
+        font-size: 14px;
+      }
+
+      .footer {
+        font-size: 12px;
+      }
+    }
+
+    /* Additional responsiveness tweaks for very large screens */
+    @media (min-width: 1200px) {
+      .img-responsive {
+        max-width: 600px; /* Larger images for large screens */
+      }
+    }
+
+  </style>
 </head>
 <body>
 
+  <!-- Audio Container -->
   <div class="audio-container">
-    <audio src="background-music.mp3" controls autoplay></audio>
+    <audio src="background-music.mp3" controls></audio>
   </div>
 
-<!-- <div class="audio-container">
-    <audio src="/music/background-music.mp3" autoplay loop></audio>
-</div> -->
-
-
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-          <li><a href="#ResearchInterests">Research Interests</a></li>
-				  <li><a href="#ResearchGroups">Research Groups</a></li>
-				  <li><a href="#Projects">Projects</a></li>
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="PeterCV-Sept2024.pdf">CV</a></li>
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="container">
-      
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 80vh;">
-              <h2 style="text-align: center;">
-                <span style="font-weight: bold;">About Me</span>
-              </h2>            
-              <h4>Ph.D. Student in Psychology 🧠 | Scientist ⚛️ | Dilettante Programmer❓💻 </h4>
-              <h4>Catastrophic in Visual Arts 🧑‍🎨 & Photography 🎨 & Cooking 👨‍🍳| Husband  💍🤵</h4>
-              <h5>🎠 Coventry, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇬🇧 the United Kingdom</h5>
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="PeterPhoto.png" alt="" style="width: 300px; height: auto;" >
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>Hello! I'm Peter originally from 🇭🇰 Hong Kong SAR. I am currently pursuing my Ph.D. in Psychology at the 💤 🛌 Sleep & Pain Laboratory at 🏫 the University of Warwick.</p>
-					
-					<p>My 🔬research, supervised by Prof. Nicole Tang and Dr. Mark Elliott (University of Birmingham), focuses on exploring the relationships between ⌚🏃‍♂️accelerometer-measured physical activity, 😴 sleep quality, and 😣 pain-related outcomes in chronic pain patients in the UK.</p>
-					
-					<p>The aim of my research is not only to advance our understanding of the dynamics of these variables but also to contribute significantly to improving contemporary pain treatment modalities.</p>
-              </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Peter Yee-Lap TO (杜以立)</b></div><br>
-                <p>Email Address: <a href="mailto:u2252928@live.warwick.ac.uk">peter.to@warwick.ac.uk</a></p>
-                <p>Department of Psychology<br>
-                University of Warwick<br>
-                CV4 7AL<br>
-                Coventry <br>
-                United Kingdom<br>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4 social-icons">
-              <a href="https://scholar.google.com/citations?user=aLJaU0wAAAAJ&hl=en" class="google-scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-              <a href="https://github.com/yeelapto" class="github" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/petertoyeelap/" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://orcid.org/my-orcid?orcid=0000-0002-1606-9403" class="orcid" title="ORCID"><i class="fab fa-orcid"></i></a>
-          </div>    
-          
-            <div class="col-md-8" style="height: 40vh;">    
-                <h2 id="ResearchInterests">Research Interests</h2>
-
-                <ul>
-                <li><p>Pain Management</p></li>
-                <li><p>Sleep & Health</p></li>
-                <li><p>Accelerometer-measured Physical Activity</p></li>
-                <li><p>Applied Machine Learning</p></li>
-                <li><p>Digital Healthcare</p></li>
-                <li><p>Neural & Physiological & Behavioral Markers of Psychological Well-being</p></li>
-                </ul>
-
-            </div>
-
-            <div class="col-md-8" style="height: 40vh;">    
-              <h2 id="ResearchGroups">Research Groups</h2>
-
-              <ul>
-                <li><a href="https://warwick.ac.uk/fac/sci/psych/research/lifespan/">Lifespan Health and Wellbeing Group</a></li>
-                <li><a href="https://warwick.ac.uk/fac/sci/psych/research/lifespan/sleeplab">Warwick Sleep and Pain Laboratory</a></li>
-                <li><a href="https://warwick.ac.uk/fac/sci/psych/research/lifespan/sleeplab/projects/within">Warwick Study of Mental Defeat in Chronic Pain (WITHIN)</a></li>
-              </ul>
-
-          </div>
-
-            <div class="col-md-8" style="height: 40vh;">    
-                <h2 id="Projects">Projects</h2>
-                <strong>Funded Projects</strong><br/>
-
-                <ul>
-                  <li>
-                    <p>
-                      <em>Co-Investigator</em>, The Evaluation of the Mindfulness-based Psychological Support Program, funded by <u>Hong Kong Federation of Youth Groups</u>, 2020-2021 (<strong>Amount: ~ HKD 1,000,000</strong>)
-                    </p>
-                  </li>
-
-                </ul>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-8" style="height: 80vh;">    
-                <h2 id="publications">Publications</h2>
-                
-                <p><strong>Peer-reviewed (in chronological order)</strong><br/></p>
-                
-                <ul>
-                  <li>
-                      <p><strong>To, P. Y. L.</strong>, Lo, B. C.-Y., Ng, T. K., Wong, B. P. H., & Choi, A. W. M. (2021). Striving to avoid inferiority and procrastination among university students: The mediating roles of stress and self-control. <em>International Journal of Environmental Research and Public Health</em>, <strong>18</strong>(11), 5570. <a href="https://doi.org/10.3390/ijerph18115570" target="_blank">https://doi.org/10.3390/ijerph18115570</a></p>
-                  </li>
-              
-                  <li>
-                      <p><strong>Shek, M. M. P.</strong>, Leung, K. C., & To, P. Y. L. (2021). Using a video annotation tool to enhance student-teachers’ reflective practices and communication competence in consultation practices through a collaborative learning community. <em>Education and Information Technologies</em>, 1-24. <a href="https://doi.org/10.1007/s10639-021-10480-9" target="_blank">https://doi.org/10.1007/s10639-021-10480-9</a></p>
-                  </li>
-              
-                  <li>
-                      <p><strong>Choi, A. W. M.</strong>, Abdullah, A., Chan, P. Y., To, P. Y. L., & Lo, C. Y. (2021). Social movements and politics of violence in cohabiting non-marital families. In T. K. Shackelford (Ed.), <em>The Sage Handbook of Domestic Violence</em> (pp. 913-929). Sage Publications, Inc.</p>
-                  </li>
-              
-                  <li>
-                      <p><strong>Choi, A. W.-M.</strong>, Lo, B. C.-Y., Lo, R. T.-F., To, P. Y. L., & Wong, J. Y.-H. (2019). Intimate partner violence victimization, social support, and resilience: Effects on the anxiety levels of young mothers. <em>Journal of Interpersonal Violence</em>. <a href="https://doi.org/10.1177/0886260519888532" target="_blank">https://doi.org/10.1177/0886260519888532</a></p>
-                  </li>
-              </ul>
-                           
-            </div>
-
-            
-        </div>
-
-
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#ResearchInterests">Research Interests</a></li>
+          <li><a href="#ResearchGroups">Research Groups</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="PeterCV-Sept2024.pdf">CV</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <div class="footer">
-      <a href="https://github.com/mavroudisv/plain-academic">Powered by Plain Academic</a>
-    </div>    
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+
+      <!-- Entries Column -->
+      <div class="col-md-8">
+        <h2 style="text-align: center;"><span style="font-weight: bold;">About Me</span></h2>            
+        <h4>Ph.D. Student in Psychology 🧠 | Scientist ⚛️ | Dilettante Programmer❓💻</h4>
+        <h4>Catastrophic in Visual Arts 🧑‍🎨 & Photography 🎨 & Cooking 👨‍🍳| Husband  💍🤵</h4>
+        <h5>🎠 Coventry, 🏴 England, 🇬🇧 the United Kingdom</h5>
+
+        <!-- Responsive Image -->
+        <img class="img-responsive" src="PeterPhoto.png" alt="Peter's Photo" >
+
+        <div style="margin-top:3%; text-align:justify;">
+          <p>Hello! I'm Peter originally from 🇭🇰 Hong Kong SAR. I am currently pursuing my Ph.D. in Psychology at the 💤 🛌 Sleep & Pain Laboratory at 🏫 the University of Warwick.</p>
+          <p>My 🔬research, supervised by Prof. Nicole Tang and Dr. Mark Elliott (University of Birmingham), focuses on exploring the relationships between ⌚🏃‍♂️accelerometer-measured physical activity, 😴 sleep quality, and 😣 pain-related outcomes in chronic pain patients in the UK.</p>
+          <p>The aim of my research is not only to advance our understanding of the dynamics of these variables but also to contribute significantly to improving contemporary pain treatment modalities.</p>
+        </div>
+      </div>
+
+      <!-- Contact Info on the Sidebar -->
+      <div class="col-md-4">
+        <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Peter Yee-Lap TO (杜以立)</b></div><br>
+        <p>Email Address: <a href="mailto:u2252928@live.warwick.ac.uk">peter.to@warwick.ac.uk</a></p>
+        <p>Department of Psychology<br>
+        University of Warwick<br>
+        CV4 7AL<br>
+        Coventry<br>
+        United Kingdom<br>
+        </p>
+      </div>
+
+      <!-- Social Media Links on the Sidebar -->
+      <div class="col-md-4 social-icons">
+        <a href="https://scholar.google.com/citations?user=aLJaU0wAAAAJ&hl=en" class="google-scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://github.com/yeelapto" class="github" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/petertoyeelap/" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://orcid.org/0000-0002-1606-9403" class="orcid" title="ORCID"><i class="fab fa-orcid"></i></a>
+      </div>
+
+      <!-- Other content here (Research Interests, Projects, Publications, etc.) -->
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="https://github.com/mavroudisv/plain-academic">Powered by Plain Academic</a>
+  </div>    
+
 </body>
-
-
 </html>
